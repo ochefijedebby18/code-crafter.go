@@ -20,7 +20,7 @@ func main() {
 
 		input = strings.TrimSpace(input)
 
-		if input == "quit" {
+		if strings.ToLower(input) == "quit" {
 			fmt.Println("\033[32;1m===GOOD BYE===\033[0m")
 			break
 		}
@@ -42,13 +42,15 @@ func main() {
 
 		num1, err := strconv.Atoi(parts[0])
 		if err != nil {
-			fmt.Println("INVALID NUMBER")
-			fmt.Println("USE NUMBER OPERATOR NUMBER")
+			fmt.Println("INVALID FIRST NUMBER")
+			fmt.Println("USE NUMBER")
 			continue
 		}
 		num2, err := strconv.Atoi(parts[2])
 		if err != nil {
-			fmt.Println("INVALID NUMBER")
+			fmt.Println("INVALID SECOND NUMBER")
+			fmt.Println("USE NUMBER")
+
 			continue
 		}
 
@@ -67,7 +69,8 @@ func main() {
 			}
 			fmt.Println(num1 / num2)
 		} else {
-			fmt.Println("INVALID INPUT")
+			fmt.Println("INVALID OPERATOR")
+			fmt.Println("USE: +-*/")
 		}
 	}
 }
