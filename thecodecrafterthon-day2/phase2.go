@@ -13,7 +13,7 @@ func main() {
 	reader := bufio.NewReader(os.Stdin)
 
 	for {
-		fmt.Println("\n\033[34;1m===ENTER REQUIREMENT TO CONVERT (or 'quit' to exit):===\033[0m")
+		fmt.Println("\n\033[34;1m===ENTER REQUIREMENT TO CONVERT (or 'quit' to exit)===\033[0m")
 
 		input, err := reader.ReadString('\n')
 		if err != nil {
@@ -85,7 +85,7 @@ func main() {
 			if baseNum == 10 {
 				fmt.Println("INVALID DECIMAL")
 			} else if baseNum == 16 {
-				fmt.Println("INVALID HEX")
+				fmt.Println("INVALID HEXADECIMAL")
 			} else if baseNum == 2 {
 				fmt.Println("INVALID BINARY")
 			}
@@ -94,7 +94,7 @@ func main() {
 
 		if baseNum == 10 {
 			fmt.Printf("Binary: %b\n", num)
-			fmt.Printf("Hex: %X\n", num)
+			fmt.Printf("Hexadecimal: %X\n", num)
 		} else {
 			fmt.Printf("Decimal: %d\n", num)
 		}
