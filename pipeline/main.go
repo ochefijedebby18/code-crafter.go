@@ -122,20 +122,20 @@ func main() {
 	writer.WriteString("SENTINEL FIELD REPORT — PROCESSED\n\n")
 
 	for scanner.Scan() {
-		line := scanner.Text()
+		text := scanner.Text()
 		linesRead++
 
-		line = TrimSpace(line)
-		line = replaceTODO(line)
-		line = capsToTitle(line)
-		line = lowerToUpper(line)
+		text = TrimSpace(text)
+		text = replaceTODO(text)
+		text = capsToTitle(text)
+		text = lowerToUpper(text)
 
-		if line == "" || DashLine(line) {
+		if text == "" || DashLine(text) {
 			linesRemoved++
 			continue
 		}
 
-		output := fmt.Sprintf("%d. %s\n", lineNumber, line)
+		output := fmt.Sprintf("%d. %s\n", lineNumber, text)
 		writer.WriteString(output)
 
 		lineNumber++
