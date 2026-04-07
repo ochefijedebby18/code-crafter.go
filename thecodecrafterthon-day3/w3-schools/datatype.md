@@ -12,3 +12,22 @@
 --> Numeric ==> This represents integer types, floating point values and complex types.
 
 --> String ==> This represents a string value
+
+
+### EXAMPLES
+
+***Boolean***
+
+    3 := true
+
+    word := false
+    
+***Numeric***
+
+    Integer --> var z int = -200 && var y uint // for signed interger(int) and unsigned interger(uint)
+
+    Float --> var z float32 = 123.78 // handles decimal point
+
+***string***
+
+    var z string = "Hello"
